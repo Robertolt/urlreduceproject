@@ -18,7 +18,7 @@ class UrlLog(models.Model):
     origem = models.URLField(max_length=512, null=True, blank=True)
     user_agente = models.CharField(max_length=512, null=True, blank=True)
     host = models.CharField(max_length=512, null=True, blank=True)
-    ip = models.IPAddressField(null=True, blank=True)
+    ip = models.GenericIPAddressField(null=True, blank=True)
     url_redirect = models.ForeignKey(UrlRedirect, models.DO_NOTHING, related_name='logs')
 
 
