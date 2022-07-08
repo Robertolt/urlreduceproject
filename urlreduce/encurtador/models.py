@@ -20,12 +20,3 @@ class UrlLog(models.Model):
     host = models.CharField(max_length=512, null=True, blank=True)
     ip = models.GenericIPAddressField(null=True, blank=True)
     url_redirect = models.ForeignKey(UrlRedirect, models.DO_NOTHING, related_name='logs')
-
-
-
-
-
-
-
-
-
